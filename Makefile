@@ -6,7 +6,7 @@
 #    By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 09:28:59 by kfum              #+#    #+#              #
-#    Updated: 2022/07/20 12:14:58 by kfum             ###   ########.fr        #
+#    Updated: 2022/08/03 12:46:03 by kfum             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ clean :
 fclean : clean
 	@echo "$(RED)Deleting .fractol...$(DEFAULT)" 
 	@rm -f $(NAME)
-	@echo "$(GREEN)DONE.$(DEFAULT)"
+	@echo "$(GREEN)DONE.\n$(DEFAULT)"
 
 re : fclean all
 
