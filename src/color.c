@@ -6,11 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 20:58:34 by kfum              #+#    #+#             */
-/*   Updated: 2022/08/03 12:24:58 by kfum             ###   ########.fr       */
+/*   Updated: 2022/08/03 12:38:40 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../include/fractol.h"
 
 /*
 ** Initial colors to graphic
