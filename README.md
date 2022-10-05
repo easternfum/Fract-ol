@@ -6,4 +6,5 @@ Multithreading is used in this project to make the graphic run smoothly.
 How to run:
 
 git clone and run 'make'.
+
 run ./fractol NAME_OF_THE_FRACTAL
