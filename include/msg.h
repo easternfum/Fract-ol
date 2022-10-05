@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   msg.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 12:54:50 by kfum              #+#    #+#             */
-/*   Updated: 2022/09/28 11:10:41 by kfum             ###   ########.fr       */
+/*   Created: 2022/08/18 09:56:41 by kfum              #+#    #+#             */
+/*   Updated: 2022/10/05 12:36:46 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef MSG_H
+# define MSG_H
 
-char	*ft_strdup(const char *src)
-{
-	char	*result;
-	size_t	i;
-	size_t	x;
+# define EXIT				"Exit success"
+# define ZOOM				"Mouse wheel - zoom in/zoom out"
+# define L_R				"Arrow left/Arrow right - move left/right"
+# define U_D				"Arrow up/Arrow down - move up/down"
+# define DEFAULT			"Q - back to default mode"
+# define ESC				"ESC - exit window"
+# define LOCK				"L - lock/unlock mode"
 
-	x = ft_strlen(src);
-	result = (char *)ft_memalloc(sizeof(*src) * (x + 1));
-	if (!result)
-	{
-		return (NULL);
-	}
-	i = 0;
-	while (src[i])
-	{
-		result[i] = src[i];
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
-}
+#endif

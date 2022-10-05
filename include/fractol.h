@@ -12,14 +12,15 @@
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
+
 # define WIDTH 1200
 # define HEIGHT 800
 # define THREADS 32
-
 # include <math.h>
 # include <pthread.h>
 # include <mlx.h>
 # include "../libft/libft.h"
+# include "msg.h"
 
 typedef struct s_fractol
 {

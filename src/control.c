@@ -61,7 +61,7 @@ int	mouse_move(int x, int y, t_window *graph)
 int	key_setting(int key, t_window *graph)
 {
 	if (key == 53)
-		exit_msg("Exit success");
+		exit_msg(EXIT);
 	if (key == 37)
 	{
 		if (graph->inter == 0)

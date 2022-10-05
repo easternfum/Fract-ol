@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_search.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 12:54:50 by kfum              #+#    #+#             */
-/*   Updated: 2022/09/28 11:10:41 by kfum             ###   ########.fr       */
+/*   Created: 2022/09/07 14:40:07 by kfum              #+#    #+#             */
+/*   Updated: 2022/09/09 09:56:39 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+int	ft_search(char *s, int c)
 {
-	char	*result;
-	size_t	i;
-	size_t	x;
+	int	count;
+	int	i;
 
-	x = ft_strlen(src);
-	result = (char *)ft_memalloc(sizeof(*src) * (x + 1));
-	if (!result)
-	{
-		return (NULL);
-	}
 	i = 0;
-	while (src[i])
+	count = 0;
+	while (s[i])
 	{
-		result[i] = src[i];
+		if (s[i] == c)
+			count++;
 		i++;
 	}
-	result[i] = '\0';
-	return (result);
+	return (count);
 }

@@ -6,7 +6,7 @@
 #    By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 09:28:59 by kfum              #+#    #+#              #
-#    Updated: 2022/08/03 12:46:03 by kfum             ###   ########.fr        #
+#    Updated: 2022/10/05 11:54:17 by kfum             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,31 +36,26 @@ all : $(NAME)
 libft/libft.a :
 	@echo "$(GREEN)Compiling libft files...$(DEFAULT)"
 	@$(MAKE) -sC libft/ all
-	@echo "$(GREEN)\nLibft compilation done.\n$(DEFAULT)"
-	@echo "$(GREEN)Compiling fractol files...$(DEFAULT)"
+	@echo "$(GREEN)Compiling $(NAME) files...$(DEFAULT)"
 	
 
 $(NAME) : $(LIB_MLX) $(OBJS)
 	@echo -n '.'
 	@$(CC) $^ -o $@ $(FLAGS) $(INC_LIB) $(MINILIB)
-	@echo "$(GREEN)\nFractol compilation done.$(DEFAULT)"
+	@echo "$(GREEN)\n$(NAME) compilation done.$(DEFAULT)"
 
 clean :
-	@echo "$(RED)Cleaning libft .o and .a files...$(DEFAULT)"
 	@$(MAKE) fclean -sC libft
-	@echo "$(GREEN)DONE.\n$(DEFAULT)"
 	@echo "$(RED)Cleaning $(NAME) .o files...$(DEFAULT)"
 	@rm -f $(OBJS)
 	@echo "$(GREEN)DONE.\n$(DEFAULT)"
 
 fclean : clean
-	@echo "$(RED)Deleting .fractol...$(DEFAULT)" 
+	@echo "$(RED)Deleting .$(NAME)...$(DEFAULT)" 
 	@rm -f $(NAME)
 	@echo "$(GREEN)DONE.\n$(DEFAULT)"
 
 re : fclean all
-
-.PHONY: all clean fclean re
 
 # Output colors
 DEFAULT	:=\033[0m

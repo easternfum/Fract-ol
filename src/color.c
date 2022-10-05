@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 20:58:34 by kfum              #+#    #+#             */
-/*   Updated: 2022/08/03 12:38:40 by kfum             ###   ########.fr       */
+/*   Updated: 2022/10/05 12:00:11 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,7 @@
 */
 static void	init_color_part(t_window *graph, char *new_graph, int g, int color)
 {
-	if (graph->f_type == 1)
-	{
-		new_graph[g + 0] = (int)((color) & 0xFF);
-		new_graph[g + 1] = (int)((color >> 1) & 0xFF);
-		new_graph[g + 2] = (int)((color >> 5) & 0xFF);
-	}
-	else if (graph->f_type == 2 || graph->f_type == 3)
+	if (graph->f_type == 2 || graph->f_type == 3)
 	{
 		new_graph[g + 0] = (int)((color) & 0xFF);
 		new_graph[g + 1] = (int)((color >> 16) & 0xFF);

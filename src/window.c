@@ -35,24 +35,24 @@ void	create_window(t_window *graph)
 void	control_instruction(t_window *graph)
 {
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 140, 0x00FFFFFF,
-		"Mouse wheel - zoom in/zoom out");
+		ZOOM);
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 130, 0x00FFFFFF, "");
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 120, 0x00FFFFFF,
-		"Arrow left/Arrow right - move left/right");
+		L_R);
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 110, 0x00FFFFFF, "");
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 100, 0x00FFFFFF,
-		"Arrow up/Arrow down - move up/down");
+		U_D);
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 90, 0x00FFFFFF, "");
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 80, 0x00FFFFFF,
-		"Q - back to default mode");
+		DEFAULT);
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 70, 0x00FFFFFF, "");
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 60, 0x00FFFFFF,
-		"ESC - exit window");
+		ESC);
 	mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 50, 0x00FFFFFF, "");
 	if (ft_strequ(graph->fract, "Julia") || ft_strequ(graph->fract, "J"))
 	{
 		mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 40, 0x00FFFFFF,
-			"L - lock/unlock mode");
+			LOCK);
 		mlx_string_put(graph->mlx, graph->window, 20, HEIGHT - 30, 0x00FFFFFF,
 			"");
 	}
